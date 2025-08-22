@@ -1,0 +1,28 @@
+/* p {
+  text-shadow: 1px 1px white;
+  text-shadow: -1px 0px white;
+} */
+/* 이상의 경우 아까 배운 것처럼 23번 라인은 무시되고 3번 라인의 text-shadow값이 적용되는 것을 확인할 수 있습니다. 그렇다면 그림자 속성은 중첩적으로 넣는 것이 불가능하냐면 그건 아니고, 이때 속성값에 ','가 들어갑니다.  */
+p {
+  text-shadow: 
+    1px 0 white,
+    -1px 0 white,
+    0 1px white,
+    0 -1px white,
+    1px 1px white,
+    1px -1px white,
+    -1px 1px white,
+    -1px -1px white,
+
+    2px 0 plum,
+    -2px 0 plum,
+    0 2px plum,
+    0 -2px plum,
+
+    2px 1px plum,
+    -2px 1px plum,
+    1px 2px plum,
+    1px -2px 10px red;
+  
+  font-size: 80px;
+}

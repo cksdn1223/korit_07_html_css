@@ -1,0 +1,79 @@
+/* 자손 결합자 */
+.outer li{
+  color: olivedrab;
+}
+/* 
+.outer 공백 li 로 되어있다는 점을 봤을 때, outer 클래스의 자손 요소인 li 태그들에게 color: olivedrab을 적용하라는 의미가 됩니다. 그렇기 때문에 ol 요소의 자손 요소인 li들은 여전히 검은색인 상태가 됩니다.
+
+Java 때와 달리 자식 클래스 / 서브 클래스라는 표현을 쓰지 않은 이유
+
+자식 / 손주 / 증손주 .. 하위 항목들이 전부 다 css의 영향을 받기 때문입니다.
+사과 / 포도 / 딸기 / 키위도 olivedrab이 된 점을 확인하면 알 수 있습니다.
+*/
+
+.outer > li{
+  color: dodgerblue;
+}
+
+.outer > li li {
+  text-decoration: underline;
+}
+/* 
+자손이 아니라 자식만 변경하고 싶다면 '>'가 포함됩니다. 18번 라인의 경우에는 outer 클래스의 1촌 자식의 자손인 li 태그에 underline이 적용되는 형태라고 볼 수 있네요. 그러면 
+
+.outer> li > li {
+  text-decoration: underline;
+}
+으로 썼을 때도 동일할까요?
+
+.outer의 자식인 li의 자식은 ul이라는 점을 감안하면 적용이 불가능합니다.
+
+참고 :
+.outer li {color: olivedrab;}을 없앴다고 가정하면, .outer > li {color:dodgerblue;}가 '자손'까지 적용된다는 점을 알 수 있습니다.이상의 경우는 서체나 텍스트 관련 등 일부 CSS 속성들이 자식들에게 자동상속 되기 때문입니다. 즉, 일촌 자식 결합자(>)라도 여기에 적용된 속성이 자동 상속을 지원하는 속성이라면 이를 덮어쓰는 다른 선택자와 속성을 지정하지 않으면 '자손'들도 해당 속성들을 물려받습니다.
+*/
+
+/* '뒤따르는' 모든 동생들 결합자 */
+.starter ~ li {
+  font-style: italic;
+}
+
+/* 뒤따르는 '바로 다음' 동생 결합자 */
+.starter + li {
+  font-weight: bold;
+}
+
+/* 가상 클래스 */
+/* 
+이상까지는 특정 id나 특정 클래스를 선택해서 스타일을 지정했는데, 가상 클래스는 이와 달리 특정 상황을 가정하고 이름을 붙입니다. 작성 방식은 콜론(:)을 사용합니다.
+*/
+
+ol li:first-child, ol li:last-child {
+  color: yellowgreen;
+}
+
+/* ~가 아닌 요소 가상 클래스 */
+.outer > li:not(:last-child) {
+  text-decoration: line-through;
+}
+
+ul:not(.outer) li {
+  font-weight: bold;
+}
+/* 
+55번 라인을 해석하면 outer 클래스의 직계 자식인 li 태그 중에 마지막 요소가 아닌것을 골라  line-through를 적용하라는 의미입니다. 그렇다면 직계 자식인 육류, 채소, 유제품, 과일중에서 마지막 과일을 뺀 나머지 세 개에만 취소선이 적용됩니다.
+
+59번 라인을 해석하면 ul태그 중 outer클래스가 아닌 것을 골라서 그 자손인 li 요소에 bold를 적용하라는 의미가 됩니다. ul 태그는 두개로 중첩되어서 이루어져있기 때문에 들여 쓰기가 적용된 사과, 포도, 딸기, 키위가 포함된 ul은 class="outer" 가 아니므로 bold 체가 적용되었습니다.
+*/
+/* ~ 번째 요소 가상 클래스 */
+/* odd / even / 3n / 을 3 대신 () 에 넣어보면 결과값이 바뀌는 것을 확인할 수 있습니다. */
+ol li:nth-child(3) {
+  font-weight: bold;
+  color: deeppink;
+}
+
+/* 가상 클래스 개념을 모르더라도 자주 쓰게 되는 예시 */
+li:hover {
+  font-weight: bold;
+  color: blue;
+}
+/* 마우스 오버 기능을 지원하는 :hover의 경우는 자주 쓰이는 편입니다. 그런데 김3의 경우 deeppink에서 안바뀌는 것을 볼 수 있는데 그 와중에 :hover보다 우선순위가 높기 때문(조건이 구체적)에 그렇습니다. */
