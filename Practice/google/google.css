@@ -1,0 +1,135 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  background-color: #212121;
+  font-family: Arial, sans-serif;
+  color: #E2DFE2;
+}
+
+/* 링크 스타일 */
+a {
+  color: #E2DFE2;
+  text-decoration: none;
+  margin-right: 15px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 상단 header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 22px;
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 로그인 버튼 */
+.loginBt {
+  border-radius: 30px;
+  background-color: #C2E7FF;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.loginBt:hover {
+  background-color: #8ea9bb;
+}
+
+/* 메인 중앙 영역 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  padding-top: 80px; /* 상단 고정 헤더 공간 확보 */
+  box-sizing: border-box;
+}
+
+/* 구글 로고 */
+.googleLogo img {
+  width: 280px;
+  height: auto;
+}
+
+/* 검색창 */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.search {
+  width: 550px;
+  max-width: 90%;
+  padding: 12px 20px;
+  border-radius: 32px;
+  border: none;
+  background-color: #4D5156;
+  color: white;
+  font-size: 16px;
+}
+.search:hover {
+  background-color: #5F6368;
+}
+.search:focus {
+  outline: none;
+  background-color: #303134;
+}
+
+/* 버튼 스타일 */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+button:not(.loginBt) {
+  border-radius: 5px;
+  border: none;
+  background-color: #303134;
+  color: #E2DFE2;
+  height: 40px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+button:not(.loginBt):hover {
+  border: 1px solid #5F6368;
+}
+
+/* 하단 footer */
+.down {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #171717;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: #E2DFE2;
+  margin: 5px 0;
+}
