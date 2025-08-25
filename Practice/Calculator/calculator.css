@@ -2,9 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background: url(../Image/수채화\ 파랑.jpg);
-
+  height: 100vh;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -12,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(255, 255, 255, 0.267);
-  box-shadow: 0 5px 20px #00000088;
+  box-shadow: 10px 10px 3px #00000088;
   width: 275px;
   height: 400px;
   background: rgba(255, 220, 220, 0.603);
@@ -21,11 +19,10 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
 .result{
   color: rgb(51, 51, 51);
-  background: rgb(255, 190, 190);
+  background: rgb(51, 51, 51);
   border: none;
   width: 230px;
   height: 45px;
@@ -37,6 +34,10 @@ body {
 .result:focus {
   outline: none;
 }
+.result:active {
+  background: rgb(255, 210, 210);
+  transform: scale(0.95);
+}
 button {
   width: 50px;
   height: 50px;
@@ -45,7 +46,6 @@ button {
   font-size: 20px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 1px 5px rgb(68, 73, 73);
   margin-top: 10px;
   font-family: inherit;
 }

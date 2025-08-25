@@ -1,0 +1,33 @@
+/* div {
+  background: orangered;
+  width: 200px;
+  height: 200px;
+} */
+/*
+1. auto 성격을 활용하기 위한 css
+  - 가로의 중간 자리에 위치하게 됨(브라우저의 사이즈와는 상관없이).
+*/
+/* div {
+  background: orangered;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+} */
+/*
+2. display: inline-block; 지정시 형태
+  - margin: auto;가 적용되지 않습니다.
+  - 하지만 inline-block에서 만약에 중앙 정렬을 하고싶다면 추가 작업이 필요합니다.
+*/
+body {
+  text-align: center;
+}
+div {
+  display: inline-block;
+  background: orangered;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+/*
+body{text-algin: center;}를 적용했을 경우 중앙 위치가 가능한 이유는 inline block 요소가 박스형태를 유지하기는 하지만(너비/높이 지정을 할 수 있기는 하지만), 기본적으로는 inline 요소처럼 텍스트의 흐름을 따라서 지정되기 대문에 `부모` 요소에 text-align: center;로 지정할 경우 중앙 위치로 배치할 수 있습니다.
+/*

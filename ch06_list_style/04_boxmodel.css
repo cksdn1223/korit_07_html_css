@@ -1,0 +1,14 @@
+div {
+  background-color: blueviolet;
+  /* width: 100%; */
+  height: 100vh;
+  line-height: 100vh; /* line-height 속성의 경우 상단에 높이의 절반만큼만 반영하기 때문에 height=line-height 값을 주게 되면 중앙부에 텍스트가 위치하게 됩니다.*/
+  text-align: center
+  /*그리고 아까 배운 text-align을 center 로 위치시켜주게 되면 화면의 정중앙에 텍스트 요소를 넣을 수 있게 되겠네요.
+  근데 이건 한줄 일대만 가능합니다.*/
+}
+
+div > div {
+  background-color: aqua;
+  height: 100%;
+}

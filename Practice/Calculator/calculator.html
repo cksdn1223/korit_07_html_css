@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="wrap">
-    <input class="result" type="text" readonly value="000000000000" maxlength="15">
+    <input id="result" class="result" type="text" readonly value="" maxlength="10">
     <div class="zero">
       <button>ce</button>
       <button class="on">on</button>
@@ -21,7 +21,7 @@
       <button>7</button>
       <button>8</button>
       <button>9</button>
-      <button class="multiple">X</button>
+      <button class="multiple">X</button> 
     </div>
     <div class="second">
       <button>4</button>
@@ -41,5 +41,40 @@
       <button class="enter">=</button>
     </div>
   </div>
+  <script>
+    let on = false;
+    function select(event) {
+      const bt = event.target;
+      const test = bt.textContent;
+      const result = document.getElementById("result");
+      
+      if (!on){
+        if (test === "on") {
+          document.getElementById("result").placeholder = "값을 입력하세요."
+          document.getElementById("result").style.background = "rgb(255, 190, 190)";
+          on = true;
+        }
+      }
+
+      if (on) {
+        if (test == "ce") {
+          result.value = "";
+        } else if (test == "off") {
+          on = false;
+          result.value = "";
+          document.getElementById("result").placeholder = ""
+          document.getElementById("result").style.background = "rgb(51, 51, 51)";
+        } else if (test == "00" || test == "0") {
+          if(result.value != ""){
+            result.value += test;
+          }
+        }else if(test != "on"){
+          result.value += test;
+        }
+      }
+
+    }
+    document.querySelectorAll("button").forEach(button => {button.addEventListener("click", select);});
+  </script>
 </body>
 </html>

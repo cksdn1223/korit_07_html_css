@@ -1,0 +1,33 @@
+body {
+  height: 200vh;
+  background: rgb(197, 239, 255);
+}
+
+header {
+  background: rgba(225, 249, 255, 0.582);
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  transition: 0.1s ease;
+  box-shadow: 1px 1px 5px black;
+  transition: 0.2s ease;
+}
+header > div {
+  text-align: center;
+  line-height: 10vh;
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.685);
+  transition: 0.2s ease;
+}
+
+header:hover {
+  height: 30vh;
+}
+header > div:hover {
+  font-size: 200%;
+}

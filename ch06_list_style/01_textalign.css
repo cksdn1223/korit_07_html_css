@@ -1,0 +1,17 @@
+div{
+  /* text-align: justify;
+  letter-spacing: 0;
+  word-spacing: 0.3em;
+  line-height: 2em;
+  text-indent: 1.5em; */
+}
+div > h1 {
+  text-align: center;
+}
+div > p {
+  text-align: justify;
+  letter-spacing: 0;
+  word-spacing: 0.3em;
+  line-height: 2em;
+  text-indent: 1.5em;
+}

@@ -3,9 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Practice/practice2.css">
   <title>Practice2</title> 
 </head>
 <body>
-  <a href="./practice.html">home</a>
+  <div>
+    <a href="./practice.html">home</a>
+    <p id="text">안녕</p>
+    <button onclick="changeText()">변경</button>
+  </div>
+
+
+  <script>
+    function changeText() {
+      const text = document.getElementById("text");
+      if(text.innerText === "Hello!") {
+        text.innerText = "안녕";
+      } else {
+        text.innerText = "Hello!";
+      }
+    }
+  </script>
 </body>
 </html>

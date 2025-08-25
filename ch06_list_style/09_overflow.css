@@ -1,0 +1,12 @@
+div {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+div > div {
+  background-color: darkcyan;
+  width: 300;
+  height: 300px;
+}
