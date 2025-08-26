@@ -1,0 +1,7 @@
+/* 외부 CSS 파일 import */
+@import url(./00_shared.css);
+
+body {
+  margin: 0;
+  padding: 24px;
+}

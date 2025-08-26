@@ -1,0 +1,22 @@
+.outer{
+  height: 600px;
+  width: 600px;
+  border: 1px solid black;
+  padding: 10px 0 0 10px;
+}
+.outer > div {
+  height: 189px;
+  width: 189px;
+  display: inline-block;
+  background: rgb(182, 182, 182);
+  margin: 0 7px 5px 0;
+}
+div > .yellow {
+  background: yellow;
+}
+.yellow > .red {
+  height: 30%;
+  width: 30%;
+  /* display: block; */
+  background: red;
+}

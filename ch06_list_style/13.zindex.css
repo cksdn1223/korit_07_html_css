@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  height: 200vh;
+}
+
+div {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background: skyblue;
+  /* 글씨 가운데 배치하기 */
+  line-height: 80px;
+  /* 화면 중앙 배치하기 */
+  position: fixed;
+  top: calc(50% - 40px);
+  left: calc(50% - 150px);
+}

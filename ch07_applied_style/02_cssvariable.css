@@ -1,0 +1,29 @@
+/* CSS 변수들을 저장한 .css 파일 import */
+@import url(./00_common.css);
+
+body {
+  margin: 0px;
+  padding: 30px;
+}
+
+.not-good {
+  text-decoration: var(--not-good);
+}
+
+.wrong {
+  text-decoration: var(--wrong);
+}
+
+u {
+  background-color: var(--warn, lightblue);
+}
+
+h1 {
+  font-size: var(--font-x-large);
+}
+
+p {
+  font-size: var(--font-large);
+  color: var(--color-text);
+}
+

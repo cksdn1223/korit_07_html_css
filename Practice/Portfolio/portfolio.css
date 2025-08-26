@@ -1,0 +1,83 @@
+body {
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cardbox {
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 80%; max-width: 1200px; min-width: 900px;
+  height: 80vh;
+  margin: 10vh;
+  border-radius: 20px;
+  display: flex;
+}
+
+.cardbox > .menu {
+  background: #007ACC;
+  width: 20%;
+  position: sticky;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 0 0 20px;
+}
+
+.profile {
+  width: 150px;
+  height: 200px;
+  border-radius: 25px;
+  background-image: url(/Image/man.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 25%;
+  margin-bottom: 5px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}
+.list > li{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  border-radius: 20px 0 0 20px;
+  color: white;
+  cursor: pointer;
+  flex:1 ;
+  padding-left: 10%;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 1.5em;
+}
+.list > li:hover {
+  background: #005f99;
+  transform: scale(1.05);
+  
+}
+/* 카드 박스: #FFFFFF + box-shadow: 0 4px 12px rgba(0,0,0,0.1) (심플하면서도 입체감)
+
+텍스트:
+
+기본 텍스트 → #333333 (눈에 편안한 다크 그레이)
+
+제목/강조 → #000000 (확실히 강조할 때만 사용)
+
+링크/포인트 → #007ACC (전문적인 블루)
+
+버튼/hover 포인트:
+
+배경 → #007ACC
+
+텍스트 → #FFFFFF
+
+hover 시 → 살짝 더 짙은 블루 #005f99 */

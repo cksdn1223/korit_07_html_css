@@ -1,103 +1,31 @@
-body {
-  background: url(../Image/수채화\ 파랑.jpg) no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+.back {
+  background: rgb(0, 196, 196);
+  border-radius: 24px;
+  height: 98vh;
+  width: 98vw;
+  padding: 10px;
+  box-sizing: border-box;
 }
-
-
-.wrap {
-  display: flex;
+.front {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
   position: relative;
-  flex-direction: column;
-  width: 400px;
-  height: 300px;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  justify-content: flex-end;
-  padding-bottom: 40px;
+  box-shadow:5px 5px 5px rgb(24, 109, 158);
 }
-
-.title img{
-  height: 120px;
+ul {
+  list-style: none;
   position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5em;
 }
-input {
-  width: 300px;
-  height: 40px;
-  margin: 10px;
-  background: none;
-  border-top-color: rgba(0,0,0,0);
-  border-right-color: rgba(0,0,0,0);
-  border-left-color: rgba(0,0,0,0);
-  border-bottom-color: rgb(0, 0, 0);;
-  font-size: 16px;
-}
-input::placeholder {
-  color: rgba(83, 83, 83, 0.83);
-}
-input:focus {
-  outline: none;
-  background: rgba(202, 202, 202, 0.1);
-  border-radius: 10px;
-}
-
-.login {
-  width: 300px;
-  height: 45px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #4a90e2, #357ae8);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.login:hover {
-  background: linear-gradient(135deg, #357ae8, #2a65c7);
-  transform: scale(1.05);
-}
-
-.login:active {
-  transform: scale(0.98);
-}
-
-.sign a {
+ul > li {
   display: inline-block;
-  width: 300px;
-  height: 45px;
-  margin-top: 10px;
-  border: 2px solid #357ae8;
-  border-radius: 25px;
-  background: transparent;
-  color: #357ae8;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 45px;
+}
+a {
   text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.sign a:hover {
-  background: #357ae8;
-  color: white;
-  transform: scale(1.05);
-}
-
-.sign a:active {
-  transform: scale(0.98);
 }
